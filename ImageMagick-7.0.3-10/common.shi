@@ -1,0 +1,22 @@
+# Test environment
+top_srcdir='/home/yenlinh/project_blog/blog1/ImageMagick-7.0.3-10'
+top_builddir='/home/yenlinh/project_blog/blog1/ImageMagick-7.0.3-10'
+
+set -a
+COMPARE="/home/yenlinh/project_blog/blog1/ImageMagick-7.0.3-10/utilities/magick compare"
+COMPOSITE="/home/yenlinh/project_blog/blog1/ImageMagick-7.0.3-10/utilities/magick composite"
+CONJURE="/home/yenlinh/project_blog/blog1/ImageMagick-7.0.3-10/utilities/magick conjure"
+CONVERT="/home/yenlinh/project_blog/blog1/ImageMagick-7.0.3-10/utilities/magick convert"
+DISPLAY="/home/yenlinh/project_blog/blog1/ImageMagick-7.0.3-10/utilities/magick display"
+IDENTIFY="/home/yenlinh/project_blog/blog1/ImageMagick-7.0.3-10/utilities/magick identify"
+MAGICK="/home/yenlinh/project_blog/blog1/ImageMagick-7.0.3-10/utilities/magick"
+MONTAGE="/home/yenlinh/project_blog/blog1/ImageMagick-7.0.3-10/utilities/magick montage"
+VALIDATE="/home/yenlinh/project_blog/blog1/ImageMagick-7.0.3-10/tests/validate"
+DRAWTEST="/home/yenlinh/project_blog/blog1/ImageMagick-7.0.3-10/tests/drawtest"
+WANDTEST="/home/yenlinh/project_blog/blog1/ImageMagick-7.0.3-10/tests/wandtest"
+LD_LIBRARY_PATH="/home/yenlinh/project_blog/blog1/ImageMagick-7.0.3-10/magick/.libs:${LD_LIBRARY_PATH}"
+MAGICK_CODER_MODULE_PATH="/home/yenlinh/project_blog/blog1/ImageMagick-7.0.3-10/coders"
+MAGICK_CONFIGURE_PATH="/home/yenlinh/project_blog/blog1/ImageMagick-7.0.3-10/config:/home/yenlinh/project_blog/blog1/ImageMagick-7.0.3-10/config"
+MAGICK_FILTER_MODULE_PATH="/home/yenlinh/project_blog/blog1/ImageMagick-7.0.3-10/filters"
+PATH="/home/yenlinh/project_blog/blog1/ImageMagick-7.0.3-10/utilities:/home/yenlinh/project_blog/blog1/ImageMagick-7.0.3-10/tests:${PATH}"
+set +a

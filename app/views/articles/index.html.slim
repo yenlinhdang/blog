@@ -1,0 +1,28 @@
+div
+  = image_tag("images.png",:width => 300)
+  |  <h1 style = "text-align: center; font: small-caps 40px/40px "Times New Roman", serif; color: #282;">MY POST
+.container
+  .col-sm-10.col-sm-offset-1.col-xs-12.blog-content
+    - @articles.each do |article|
+      .col-xs-12.text-center
+        .text-center
+          h2[style="color: #A0522D; font-family: time new roman;background: #FAFAD2;"]
+            = article.title
+          h6
+            = article.created_at.strftime('%b %d, %Y')
+            |  |Post by 
+            = article.admin.email
+            | | Comment(
+            =article.comments.count
+            | )
+        div
+          = raw(article.text).truncate(358).html_safe()
+        .text-center
+          = link_to "READ MORE", article_path(article)
+        - if admin_signed_in?
+          .text-center
+            = link_to ' Edit ', edit_article_path(article)
+            = link_to ' Delete ', article_path(article),
+                           method: :delete,
+                           data: { confirm: 'Are you sure?' }
+        br
